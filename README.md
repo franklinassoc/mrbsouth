@@ -4,6 +4,10 @@
  The project website is [mrbsouth.com](https://www.mrbsouth.com/)
 
  ## Source...
- This is forked and adapted from a codebase originally by ...
+ This is forked and adapted from a codebase originally by HandsOnDataViz entitled [leaflet-storymaps-with-google-sheets](https://handsondataviz.org/leaflet-storymaps-with-google-sheets.html)
+ 
+ 
+ 
+ 
  
  
