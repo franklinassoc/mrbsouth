@@ -82,26 +82,12 @@ $(window).on('load', function() {
   /**
    * Loads the basemap and adds it to the map
    */
-// function addBaseMap() {
-//   var basemap = trySetting('_tileProvider', 'Stamen.TonerLite');
-//    L.tileLayer.provider(basemap, {
-//     maxZoom: 18
-//    }).addTo(map);
-//  }
-  
-// below utilizes air photo tiles from ESRI
-function addBaseMap() {
-var basemap = L.map('map').setView([30.263945, -91.110682], 10);
-        mapLink = 
-            '<a href="http://www.esri.com/">Esri</a>';
-        wholink = 
-            'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
-        L.tileLayer(
-            'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-            attribution: '&copy; '+mapLink+', '+wholink,
-            maxZoom: 18,
-            }).addTo(map);
-}
+ function addBaseMap() {
+   var basemap = trySetting('_tileProvider', 'Stamen.TonerLite');
+    L.tileLayer.provider(basemap, {
+     maxZoom: 18
+    }).addTo(map);
+  }
 
   function initMap(options, chapters) {
     createDocumentSettings(options);
@@ -115,7 +101,7 @@ var basemap = L.map('map').setView([30.263945, -91.110682], 10);
     // Add logo
     if (getSetting('_mapLogo')) {
       $('#logo').append('<img src="' + getSetting('_mapLogo') + '" />');
-      $('#top').css('height', '60px');
+      $('#top').css('height', '120px');
     } else {
       $('#logo').css('display', 'none');
       $('#header').css('padding-top', '25px');
