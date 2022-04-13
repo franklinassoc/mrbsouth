@@ -82,17 +82,16 @@ $(window).on('load', function() {
   /**
    * Loads the basemap and adds it to the map
    */
- /** function addBaseMap() {
- *   var basemap = trySetting('_tileProvider', 'Stamen.TonerLite');
- *   L.tileLayer.provider(basemap, {
- *     maxZoom: 18
- *   }).addTo(map);
- * }
-  */
+// function addBaseMap() {
+//   var basemap = trySetting('_tileProvider', 'Stamen.TonerLite');
+//    L.tileLayer.provider(basemap, {
+//     maxZoom: 18
+//    }).addTo(map);
+//  }
   
 // below utilizes air photo tiles from ESRI
 function addBaseMap() {
-var basemap = L.map('map').setView([-91.110682, 30.263945], 10);
+var basemap = L.map('map').setView([30.263945, -91.110682], 10);
         mapLink = 
             '<a href="http://www.esri.com/">Esri</a>';
         wholink = 
