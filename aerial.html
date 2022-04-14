@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Leaflet Map Displaying ESRI satellite imagery</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7/leaflet.css" />
+</head>
+<body>
+    <div id="map" style="width: 1024px; height: 768px"></div>
+
+    <script src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7/leaflet.js">
+    </script>
+
+    <script>
+        var map = L.map('map').setView([30.326535, -91.216336], 8);
+        mapLink = 
+            '<a href="http://www.esri.com/">Esri</a>';
+        wholink = 
+            'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
+        L.tileLayer(
+            'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '&copy; '+mapLink+', '+wholink,
+            maxZoom: 18,
+            }).addTo(map);
+  
+    </script>
+</body>
+</html>
