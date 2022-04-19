@@ -128,7 +128,7 @@ var map = L.tileLayer.provider(basemap, {
   zoom: 5,
  maxZoom: 18
 }).addTo(map);
-}
+
 
   function initMap(options, chapters) {
     createDocumentSettings(options);
