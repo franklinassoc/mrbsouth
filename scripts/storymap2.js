@@ -92,7 +92,8 @@ $(window).on('load', function() {
  
  // Code below borrowed from JFiddle.
  var basemap = L.map('map', {
-  center: [31.0, -91.0],
+  center: [30.263945, -91.110682],
+  zoom: 5,
   maxZoom: 18,
   zoomControl: true
 });
@@ -122,8 +123,9 @@ map.on('resize', resizeLayerControl);
 resizeLayerControl();
  // End of code borrowed from JFiddle.
  
-var basemap = L.tileLayer.provider(basemap, {
-  center: [31.0, -91.0],
+var map = L.tileLayer.provider(basemap, {
+  center: [30.263945, -91.110682],
+  zoom: 5,
  maxZoom: 18
 }).addTo(map);
 }
