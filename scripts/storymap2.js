@@ -91,7 +91,11 @@ $(window).on('load', function() {
  */
  
  // Code below borrowed from JFiddle.
-   function addBaseMap() {
+ var basemap = L.map('map', {
+  center: [31.0, -91.0],
+  maxZoom: 18,
+  zoomControl: true
+});
    var defaultLayer = trySetting('_tileProvider', 'Stamen.TonerLite');
    var baseLayers = {
   'OpenStreetMap Default': defaultLayer,
@@ -102,7 +106,6 @@ $(window).on('load', function() {
 
   var overlayLayers = {
  'Stamen TonerLines': L.tileLayer.provider('Stamen.TonerLabels'),
- 'OpenWeatherMap CloudsClassic': L.tileLayer.provider('OpenWeatherMap.CloudsClassic'),
   }; 
 
   var layerControl = L.control.layers(baseLayers, overlayLayers, {
@@ -121,6 +124,7 @@ resizeLayerControl();
  
 var basemap = ;
 L.tileLayer.provider(basemap, {
+  center: [31.0, -91.0],
  maxZoom: 18
 }).addTo(map);
 }
