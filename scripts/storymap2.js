@@ -122,8 +122,7 @@ map.on('resize', resizeLayerControl);
 resizeLayerControl();
  // End of code borrowed from JFiddle.
  
-var basemap = ;
-L.tileLayer.provider(basemap, {
+var basemap = L.tileLayer.provider(basemap, {
   center: [31.0, -91.0],
  maxZoom: 18
 }).addTo(map);
