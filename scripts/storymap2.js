@@ -90,6 +90,7 @@ $(window).on('load', function() {
  * }
  */
  
+ function addBaseMap() {
  // Code below borrowed from JFiddle.
  var basemap = L.map('map', {
   center: [30.263945, -91.110682],
@@ -147,6 +148,7 @@ var map = L.tileLayer.provider(basemap, {
       $('#logo').css('display', 'none');
       $('#header').css('padding-top', '25px');
     }
+}
 
     // Load tiles
     addBaseMap();
